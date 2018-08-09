@@ -1,0 +1,26 @@
+<div id="posts-index" class="posts-index-section">
+  <div class="container">
+    <div class="section-title">
+      <h3>スレッド一覧</h3>
+    </div>
+    <% if @posts.count > 0 %>
+      <% @posts.each do |post| %>
+        <div class="post">
+          <h4><%= post.title %></h4>
+          <p class="post-name">
+            投稿者名：<%= post.name %>　メールアドレス：<%= post.email %>　投稿日時：<%= post.created_at.strftime("%Y年%m月%d日 %H:%M:%S") %>
+          </p>
+          <p class="post-body"><%= post.body %></p>
+          <div class="post-respond">
+            <p class="post-respond-count">返答数：<%= post.responses.count %></p>
+            <%= link_to("返答を見る","/posts/show/#{post.id}",{class: "post-respond-button"}) %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="nothing-notice">
+        <p>投稿がありません。</p>
+      </div>
+    <% end %>
+  </div>
+</div>

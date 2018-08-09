@@ -1,0 +1,172 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px 0px 0px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  color: #888;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  color: #444;
+  font-size: 18px;
+}
+
+.container {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-title {
+  color: #555;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  text-align: center;
+  h3 {
+    margin: 10px 0px;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 36px;
+  }
+}
+
+.flash{
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
+  background-color: coral;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  z-index: 3;
+}
+
+header{
+  width: 100%;
+  height: 60px;
+  background-color: #BFFF00;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+}
+
+.header-logo{
+  float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.header-menu{
+  float: right;
+  li{
+    margin-right: 20px;
+    margin-left: 10px;
+    float: left;
+  }
+  a{
+    font-size: 18px;
+    line-height: 60px;
+    color: #3F7F00;
+  }
+}
+
+.top-section{
+  margin: 0px auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  color: white;
+  background-image: url("Topbackground.png");
+  background-size: cover;
+}
+
+.features-section{
+  text-align: center;
+}
+.page-top{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  background-image: url("Pagetop.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.start-button{
+  display: block;
+  width: 300px;
+  height: 48px;
+  line-height: 48px;
+  margin: 50px auto 30px;
+  font-size: 24px;
+  text-align: center;
+  background-color: #bfff00;
+  color: #3f7f00;
+  border-radius: 10px;
+}
+footer{
+  width: 100%;
+  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  background-color: darkslategray;
+  h6{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  p{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,106 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-body{
+  width: 800px;
+  margin: 10px auto 50px;
+  padding: 20px;
+  background-color: #EEE;
+  p{
+    font-size: 16px;
+    color: #444;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+  input[type="submit"]{
+    display: block;
+    width: 160px;
+    height: 48px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #BFFF00;
+    color: #1F7F00;
+    cursor: pointer;
+  }
+  input[type="text"], input[type="email"]{
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 36px;
+    font-size: 16px;
+    border-style: none;
+    padding-left: 5px;
+  }
+  textarea{
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    border-style: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    resize: none;
+  }
+}
+
+.small{
+  font-size: 12px;
+  color: red;
+}
+
+.nothing-notice{
+  p{
+    color: #CCC;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.post{
+  width: 800px;
+  border: 1px solid #CCC;
+  margin: 0px auto -1px;
+  padding: 10px;
+}
+
+.post-title{
+  font-size: 16px;
+  color: black;
+}
+
+.post-name{
+
+}
+
+.post-body{
+  font-size: 15px;
+  color: #444;
+}
+
+.post-respond{
+  margin-top: 20px;
+  text-align: right;
+}
+
+.post-respond-count{
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.post-respond-button{
+  display: inline-block;
+  width: 128px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #bfff00;
+  color: #1f7f00;
+  text-align: center;
+  
+}

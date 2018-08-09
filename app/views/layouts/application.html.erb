@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SimplestBoard</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("/") do %>
+          <%= image_tag("SimplestBoardLogo.png") %>
+        <% end %>
+      </div>
+      <ul class="header-menu">
+        <li>
+          <%= link_to("スレッド一覧","/posts") %>
+        </li>
+        <li>
+          <%= link_to("新規投稿","/posts/new") %>
+        </li>
+      </ul>
+    </header>
+    <div class="page-top"></div>
+    <%= yield %>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+  </body>
+</html>

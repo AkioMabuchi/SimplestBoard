@@ -1,0 +1,20 @@
+<div id="new-post" class="new-post-section">
+  <div class="container">
+    <div class="section-title">
+      <h3>新規投稿</h3>
+    </div>
+    <%= form_tag("/create/0") do %>
+      <div class="form-body">
+        <p>名前</p>
+        <input name="name" type="text">
+        <p>メールアドレス</p>
+        <input name="email" type="email">
+        <p>タイトル<span class="small">（必須）</span></p>
+        <input name="title" type="text">
+        <p>内容<span class="small">（必須）</span></p>
+        <textarea name="body"></textarea>
+        <input type="submit" value="投稿">
+      </div>
+    <% end %>
+  </div>
+</div>

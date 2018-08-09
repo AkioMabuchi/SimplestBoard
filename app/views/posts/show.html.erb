@@ -1,0 +1,63 @@
+<div id="top-post" class="top-post-section">
+  <div class="container">
+    <div class="section-title">
+      <h3>詳細</h3>
+    </div>
+    <div class="post">
+      <h4><%= @post.title %></h4>
+      <p class="post-name">投稿者名：<%= @post.name %>　メールアドレス：<%= @post.email %>　投稿日時：</p>
+      <p class="post-body"><%= @post.body %></p>
+      <div class="post-respond">
+        <p class="post-respond-count">返答数：<%= @post.responses.count %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="new-response" class="new-response-section">
+  <div class="container">
+    <div class="section-title">
+      <h3>返答する</h3>
+    </div>
+    <%= form_tag("/create/#{@post.id}") do %>
+      <div class="form-body">
+        <p>名前</p>
+        <input name="name" type="text">
+        <p>メールアドレス</p>
+        <input name="email" type="email">
+        <p>タイトル<span class="small">（必須）</span></p>
+        <input name="title" type="text" value="Re：<%= @post.title %>">
+        <p>内容<span class="small">（必須）</span></p>
+        <textarea name="body"></textarea>
+        <input type="submit" value="投稿">
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<div id="responses-index" class="responses-index-section">
+  <div class="container">
+    <div class="section-title">
+      <h3>返答一覧</h3>
+    </div>
+    <% if @post.responses.count > 0 %>
+      <% @post.responses.each do |response| %>
+        <div class="post">
+          <h4><%= response.title %></h4>
+          <p class="post-name">投稿者名：<%= response.name %>　メールアドレス：<%= response.email %>　投稿日時：</p>
+          <p class="post-body"><%= response.body %></p>
+          <div class="post-respond">
+            <p class="post-respond-count">返答数：<%= response.responses.count %></p>
+            <%= link_to("返答を見る","/posts/show/#{response.id}",{class: "post-respond-button"}) %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="nothing-notice">
+        <p>返答がありません。</p>
+      </div>
+    <% end %>
+  </div>
+</div>
